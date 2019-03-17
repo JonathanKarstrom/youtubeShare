@@ -1,0 +1,18 @@
+<h1>Room</h1>
+<h2>{{roomName}}</h2>
+
+<div class="video-wrapper">
+    <p>{{connectedClients}}</p>
+    <div class="embed-responsive embed-responsive-16by9">
+        <youtube-video class="embed-responsive-item" video-url="custom.url" player="custom.player"
+            player-vars="custom.vars"></youtube-video>
+    </div>
+    <div class="controls">
+        <button class="border-button play" ng-click="custom.player.playVideo()">play</button>
+        <button class="border-button pause" ng-click="custom.player.pauseVideo()">pause</button>
+        <p>{{custom.player.getCurrentTime()}}</p>
+        <p>{{playlist}}</p>
+    </div>
+    <input ng-model="newVideo">
+    <button ng-click="addToPlayList(newVideo)">Lägg till i spellista</button>
+</div>
